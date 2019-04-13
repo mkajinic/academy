@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="animation.css">
+    <title>Stop Start Animation</title>
+</head>
+<body>
+
+    <div id="wrapper">
+        <button onclick="start()">Start</button> 
+        <button onclick="pause()">Pause</button>
+        <input id="speed" type="range" min="1.2" max="15" onchange="changeAnimationSpeed()"></input>
+        
+        <div id="movearea">
+            <div id="box"></div>
+        </div>
+    </div>
+
+    
+</body>
+
+<script>
+    var box = document.getElementById("box");
+
+    //Code for Chrome, Safari and opera
+    box.addEventListener('webkitAnimationEnd',playEndSound);
+
+    //Standard syntax
+    box.addEventListener('animationend',playEndSound);
+
+    //transitionend - end of an element transition
+    box.addEventListener('transitionend',playEndSound);
+
+
+    function playEndSound(){
+        box.classList.remove("animateBox");
+        var sound = new Audio('audio/Click.mp3');
+        sound.play();
+    }
+
+    function start(){
+
+        box.classList.add("animateBox");//Add the animateBox css class to the box element
+        box.style.webkitAnimationPlayState = 'running';
+        box.style.animationPlayState = 'running';
+        var sound = new Audio ('audio/Jump.mp3');
+        sound.play();
+
+    }
+
+
+    function pause(){
+        box.style.webkitAnimationPlayState = 'paused';
+        box.style.animationPlayState = 'paused';
+        var sound = new Audio ('audio/Jump.mp3');
+        sound.play();
+    }
+
+     function changeAnimationSpeed(){
+         /*
+         let slider = document.getElementById("speed");
+         console.log(speed);//testing to see the value returned rom the box element
+        let val = slider.value;
+
+        //inverts slides value in the range slider.min to slider.max
+        val =  slider.max -(val -slider.min);
+        box.style.animationDuration = val + "s"; // "s" is for sec
+        */
+       
+       var speed = document.getElementById("speed").value;
+       console.log(speed);//testing to see the value returned rom the box element
+
+       box.style.animationDuration = speed + "s"; // "s" is for sec
+
+       document.getElementById("speed").blur();
+    }
+
+</script>
+
+</html>
