@@ -32,78 +32,42 @@
                  </nav>
 
                  <main id="main">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor necessitatibus recusandae laboriosam dolorum quam. Dolore modi, recusandae inventore dolorum necessitatibus at nesciunt, porro ad vero quasi, ipsam quos. Tempore, velit.</p>
-                        <p>Iste praesentium est rerum similique officiis dolores eum vero voluptas, quia voluptatibus nihil asperiores vitae quis nesciunt repellendus accusantium dolor? Rem minus voluptas porro corrupti eos delectus dolorum blanditiis ipsum.</p>
-                        <p>Voluptatum, vel? Blanditiis nam voluptatibus placeat minima sequi nihil quis, dolor magnam adipisci similique ipsum vero, repellat ab illum! Ipsa totam dolores corrupti ex earum recusandae sapiente neque, maiores dolor.</p>
+                     <div class="container">
+                         <ul id="services">
+                             <li> 
+                                  <p>“The purpose of yoga is to build strength, awareness and harmony in both the mind and body,” .</p>
+                            </li>
+                            
+                             <li>
+                                    <p>It incorporates breathing exercises, meditation and poses designed to encourage relaxation and reduce stress..</p>
+                             </li>
+
+
+
+                             <li>
+                                    <p>Some styles of yoga, such as ashtanga and power yoga, are very physical. Practicing one of these styles will help you improve muscle tone.
+
+                                            But even less vigorous styles of yoga, such as Iyengar or hatha, can provide strength and endurance benefits.
+                                            
+                                            Many of the poses, such as downward dog, upward dog, and the plank pose, build upper-body strength. The standing poses, especially if you hold them for several long breaths, build strength in your hamstrings, quadriceps, and abs. Poses that strengthen the lower back include upward dog and the chair pose.
+                                            
+                                            When done right, nearly all poses build core strength in the deep abdominal muscles.</p>
+                             </li>
+                         </ul>
+                        </div>
                     </main>
 
-                    <div id="coin"></div>
-                    <div id="wrapper">
-                        <button onclick="start()">Start</button> 
-                        <button onclick="pause()">Pause</button>
-                        <input id="speed" type="range" min="1.2" max="15" onchange="changeAnimationSpeed()"></input>
-
-
-
-                       <!--Coin animation--> 
-                        <script>
-                        
-                        
-   
-                        var coin = document.getElementById("coin");
-
-//Code for Chrome, Safari and opera
-coin.addEventListener('webkitAnimationEnd',playEndSound);
-
-//Standard syntax
-coin.addEventListener('animationend',playEndSound);
-
-//transitionend - end of an element transition
-coin.addEventListener('transitionend',playEndSound);
-
-
-function playEndSound(){
-    coin.classList.remove("coinAnimation");
-    var sound = new Audio('audio/Click.mp3');
-    sound.play();
-}
-
-function start(){
-
-    coin.classList.add("coinAnimation");//Add the coinAnimation css class to the coin element
-    coin.style.animationPlayState = 'running';
-    var sound = new Audio ('audio/poker-chips.mp3');
-    sound.play();
-
-}
-
-
-function pause(){
-    coin.style.webkitAnimationPlayState = 'paused';
-    coin.style.animationPlayState = 'paused';
-    var sound = new Audio ('audio/End_Fx.mp3');
-    sound.play();
-}
-
- function changeAnimationSpeed(){
-     /*
-     let slider = document.getElementById("speed");
-     console.log(speed);//testing to see the value returned rom the box element
-    let val = slider.value;
-
-    //inverts slides value in the range slider.min to slider.max
-    val =  slider.max -(val -slider.min);
-    box.style.animationDuration = val + "s"; // "s" is for sec
-    */
-   
-   var speed = document.getElementById("speed").value;
-   console.log(speed);//testing to see the value returned rom the box element
-
-   coin.style.animationDuration = speed + "s"; // "s" is for sec
-
-   document.getElementById("speed").blur();
-}              
-                        </script>
+                    <div class="map">
+                            <h3>Where to find Yoga classes</h3>
+                            <br>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22659.427388532917!2d-6.288503143393796!3d53.3472138204628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xab09c4c9049f89d1!2sHotpod+Yoga+Dublin!5e0!3m2!1sen!2sie!4v1554811214621!5m2!1sen!2sie" width="400" height="300" frameborder="0" style="border:5px solid white" allowfullscreen></iframe> 
+                        </div>
+    
+                        <div class="video">
+                                <h3>How to do yoga</h3>
+                            <br>
+                            <iframe width="400" height="300" src="https://www.youtube.com/embed/M-8FvC3GD8c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="border:5px solid white"  allowfullscreen></iframe>
+                        </div>
 
 </body>
 </html>
