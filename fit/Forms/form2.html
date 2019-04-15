@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+#form2{
+    width:400px;
+    color: green;
+    margin: 50px auto;
+    border : 1px solid rgb(145, 35, 139);
+    
+}
+fieldset{
+    margin: 10px 5%;
+    border: 1px solid mediumseagreen; 
+    
+}
+legend{
+    color: rgb(145, 35, 139);
+}
+input [type="text"], input[type="password"], input[type="email"],input[type="tel"], label{
+    margin: 5px auto;
+    color: black;
+}
+input[type="submit"]{
+ margin: 10px 10%;
+    }
+    
+label{
+    float:left;
+    width:80px; 
+}
+label[for="signup"]{
+float: none;
+}
+
+</style>
+
+</head>
+<body>
+    <form action="process.php" id="form2" method="POST">
+        <fieldset>
+            
+            <legend>Log In Details:</legend>
+            <label for="email">Email:</label>
+            <input type="text" name="email" required placeholder="email@email.com">
+            <br>
+            <br>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" required placeholder="Enter your password">
+       
+        </fieldset>
+
+        <fieldset>
+                <legend>Address:</legend>
+                <label for="street">Street:</label>
+                <input type="text" name="street" required>
+                <br>
+                <br>
+
+                <label for="town">Town:</label>
+                <input type="text" name="town" required>
+                <br>
+                <br>
+
+                <label for="city">City:</label>
+                <input type="text" name="city" required>
+                <br>
+                <br>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" name="phone" required>
+            </fieldset>
+
+            <fieldset> 
+                <legend>Newsletter</legend>
+                <input type="checkbox" id="newsletter">
+                <label for="signup"> Sign up for newsletter </label><br>
+                <input type="submit" name="submit">
+                <input type="reset" name="reset">
+            </fieldset>
+
+    </form>
+</body>
+</html>

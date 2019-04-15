@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page 2</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px ;
+            background-color: cadetblue;
+            margin: 20px 20px;
+            margin: 20px auto;
+            transition: all .3s;
+        }
+    
+        p{
+            background-color: crimson;
+            transition: all 1s;
+            width: 50%;
+            margin:0 auto;
+        }
+
+    </style>
+    <script>
+        function bigger(element){
+            element.style.transform = "scale(2)";
+            element.innerHTML ="I have been moused over";
+        }
+
+        function smaller(element){
+            element.style.transform = "scale(1)";
+            element.innerHTML ="<p>I have been moused out </p>";
+        }
+    </script>
+
+</head>
+<body>
+    
+    <div onmouseover="bigger(this);" onmouseout="smaller(this);"></div>
+    <div onmouseover="bigger(this);" onmouseout="smaller(this);"></div>
+    <div onmouseover="bigger(this);" onmouseout="smaller(this);"></div>
+    <div onmouseover = "bigger(this);" onmouseout="smaller(this);"></div>
+    <div onmouseover = "bigger(this);" onmouseout="smaller(this);"></div>
+    <div onmouseover = "bigger(this);" onmouseout="smaller(this);"></div>
+    <div onmouseover = "bigger(this);" onmouseout="smaller(this);"></div>
+   
+   
+    <p onmouseover="bigger(this);" onmouseout="smaller(this);">I am a paragraph</p>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="getPosition()">Click here to get your coordinates</button>
+    <p id="lat">Latitude: </p>
+    <p id="long">Longitude: </p>
+</body>
+
+<script>
+    //use HTML5 Geolocation API
+    function getPosition(){
+        var lat = document.getElementById("lat");
+        var long = document.getElementById("long");
+
+        //navigation is the browser
+        //Check to see if geolocation is supported/available
+        if (navigator.geolocation) {
+            console.log("Geolocation is supported");
+
+            navigator.geolocation.getCurrentPosition(setPosition);
+        }
+        else{
+            lat.innerHTML += "Your browser does not support geolocation"
+            long.innerHTML += "Your browser does not support geolocation"
+        }
+    }
+
+    //function to show/set the lattitude and longitude 
+    function setPosition(position){
+        lat.innerHTML += position.coords.latitude;
+        long.innerHTML += position.coords.longitude;
+    }
+
+
+    //self invoking function
+    (function(){
+        console.log("I am an anonymus function");
+    })();
+</script>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    #wrapper{
+        width: 80%;
+        margin: 0 auto;
+    }
+    #img1{
+        width: 300px;
+        height: 300px;
+    }
+    </style>
+
+    <script>
+        function toggleImage(element){
+            var element = document.getElementById('img1');
+
+            if (element.getAttribute ('src') == 'images/car1.jpg'){
+
+                element.src ='images/car2.jpg';
+               // console.log(element.src);
+            }
+            else{
+                element.src ='images/car1.jpg';
+               // console.log(element.src);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+
+        <button onclick="toggleImage();">Click here to change the image</button>
+        <img id="img1" src="images/car1.jpg" alt="">
+      
+         
+
+
+    </div>
+
+
+</body>
+</html>

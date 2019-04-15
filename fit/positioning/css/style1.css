@@ -1,0 +1,104 @@
+*{
+
+	box-sizing: border-box;
+}
+
+#wrapper{
+	width: 80%;
+	margin:65px auto;
+}
+#div1, #div2, #div3{
+width:100%;
+height: 200px;
+margin-top:50px;
+}
+
+#div1{
+	background-color: #91a8ee;
+	
+}
+
+#div2{
+	background-color: #ee91a8;
+	position: relative;
+	top:100px;
+	left: 100px;
+	z-index: 5;
+}
+
+#div3{
+	background-color: #bf91ee;
+	position: relative;
+	z-index: 10;
+	top: -100px;
+	right: 100px;
+}
+
+#div4{
+	width: 100px;
+	height: 100px;
+	background-color: #ee91ee;
+	margin-top: 50px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 20;
+}
+#little-div{
+	width: 100px;
+	height: 100px;
+	background-color: magenta;
+	border-radius: 5px;
+	border: 2px solid gray;
+	position: absolute;
+	top: 30px;
+	left: 100px;
+
+
+}
+#outter{
+	width: 100%;
+	height: 400px;
+	background-color: tomato;
+	padding: 1px;
+	position:relative;
+
+}
+#inner1{
+	width: 80%;
+	height: 300px;
+	background-color: lightblue;
+	margin-top: 50px;
+	margin-left:20%;
+	padding: 1px;
+
+}
+#inner2{
+	width: 80%;
+	height: 200px;
+	background-color: lightgreen;
+	margin-top: 50px;
+	margin-left:20%;
+}
+p{
+	background-color: orange;
+}
+#div5{
+	background-color: tomato;
+	height:1000px ;
+}
+#top-nav{
+width: 100%;
+height:60px;
+background-color:green;
+position:fixed;
+top: 0px;
+left: 0px;
+}
+
+/*get rid of default paddina dna margin in html and body tag*/
+html, body{
+	padding:0;
+	margin:0;
+}
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/myscript.js"></script>
+    <title>Document</title>
+    <script>
+        function showNum(){
+        var number = document.getElementById("num").value;
+        alert(number);
+    }
+        
+
+    function showColor(){
+        var color = document.getElementById("select1").value;
+        alert(color);
+
+        //change docs background color
+       // document.getElementsByTagName("body")[0].style.backgroundColor=color;
+
+        document.getElementById("body").style.backgroundColor = color;
+
+        //document.bgColor=color; do not use!
+    }
+    function blueParas(){
+        //get an array of all 'p' tag elements
+        var paragraphs = document.getElementsByTagName("p")
+
+        for (let index = 0; index < paragraphs.length; index++) {
+             paragraphs[index].style.color = "blue";
+            
+        }
+
+    }
+
+
+</script>
+</head>
+<body id="body">
+    Type in a number: <input id="num" type="text" name="num">
+    <button onclick="showNum();">Show number</button>
+
+    <br>
+    <br>
+    <br>
+
+    <select name="color" id="select1">
+        <option value="green">Green</option> 
+        <option value="red" selected>Red</option>
+        <option value="blue">Blue</option>  
+    </select>
+
+    press here to show the selected color: <button onclick="showColor()">Show color selected</button>
+
+    <br>
+    <br>
+    <br>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Ratione velit eveniet inventore, accusamus recusandae maiores, a esse 
+        quos odio beatae minus! A odit nihil necessitatibus omnis reprehenderit
+        excepturi illo molestiae!</p>
+    <p>Eaque error, cupiditate cum quisquam dolor, aliquam aliquid tenetur tempora quaerat impedit officia odit necessitatibus excepturi, veritatis maiores assumenda voluptate quibusdam eos exercitationem neque illum perspiciatis laborum minus porro. Consequuntur.</p>
+    <p>Obcaecati quos optio quo temporibus voluptatibus? Sit aperiam 
+        illo voluptatibus tempore molestiae expedita ut pariatur quis 
+        sequi, culpa qui ipsam laudantium dolor veniam numquam inventore 
+        repudiandae deleniti recusandae quod corrupti.</p>
+    <p>Ex accusamus non facilis. Id placeat dolor recusandae corporis 
+        nobis dolorum explicabo non atque incidunt porro possimus dolorem,
+        quam aperiam laborum expedita repudiandae doloremque. 
+        Minus deleniti fugit dignissimos aut odio.</p>
+    <p>Explicabo corporis inventore dolorem fugiat adipisci eaque blanditiis 
+        architecto quam animi, a quisquam molestias libero illum
+         iusto at voluptate assumenda harum modi in necessitatibus, 
+         cumque alias aperiam. Error, mollitia explicabo.</p>
+
+        <button onclick="blueParas()">Change all paragraph text to blue</button>
+</body>
+</html>

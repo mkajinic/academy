@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Celsius Fahrenheit Converter</title>
+    <style>
+    #converter{
+        background-color: cornflowerblue;
+        width: 170px;
+        margin: 0 auto;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    input,select,button, label{margin: 5px auto; width: 80%;}
+    </style>
+    <script>
+        function convert(){
+            //input is the text/string value of the input box
+            var input = document.getElementById("input").value;
+
+            //select is the text/string value of the selected option
+            var select = document.getElementById("cf").value;
+
+            //try and parse the input to a float
+            var num = parseFloat(input);
+
+            if(Number.isNaN(num)){
+                alert("That is not a valid number\nPlease check your input");
+            }
+           else{
+               if (select =="ctof"){
+                    //convert from c to f
+                    document.getElementById("result").value = (((num*9)/5)+32).toFixed(3);
+               }
+               else{
+                   //convert to f to c
+                   document.getElementById("result").value =(((num-32)*5)/9).toFixed(3);
+               }
+           }
+        }
+    </script>
+
+</head>
+<body>
+    <!--div#converter>input+select>option*2+input+br+button -->
+    <div id="converter">
+        <input type="text" id="input">
+        <select name="cf" id="cf">
+            <option value="ctof">Celsius To Fahrenheit</option>
+            <option value="ftoc">Fahrenheit To Celsius </option>
+        </select>
+        <br>
+        <label>Result:</label> <input type="text" id="result" value="0">
+        <br>
+        <button onclick="convert()">Convert</button>
+    </div>
+
+</body>
+</html>

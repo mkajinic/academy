@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+#box{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;  
+    position: relative;
+    animation-play-state: paused;
+
+}
+.animatebox{
+    animation: boxMove 2s 1;
+}
+
+@keyframes boxMove{
+    0%{left:0px;}
+    50%{left:300px;}
+    100%{left:0px;}
+}
+
+</style>
+
+</head>
+<body>
+    <div id="box">
+
+    </div>
+
+    <button onclick="start()">Start</button>
+    <button>Stop</button>
+
+</body>
+
+<script>
+    var box = document.getElementById("box");
+
+    function start(){
+        box.classList.add("animatebox");
+        box.style.animationPlayState = 'running';
+    }
+
+    //the ('end'); function will be called/invoked when the 'animationend' event is raised
+    box.addEventListener('animationend',end);
+
+    function end(){
+        box.classList.remove("animatebox");
+        console.log("animation has ended");
+    }
+
+    //Function with a parameter of a callback
+    function myCallBack(callback){
+        console.log("Inside myCallBack function");
+        callback();
+    }
+
+    function x(){
+        console.log("Inside the x function");
+       
+    }
+
+    function y(){
+        console.log("Inside the Y function");
+       
+    }
+
+    //Pas in a function name as  a parametar
+    myCallBack(x);
+    myCallBack(y);
+
+
+</script>
+</html>

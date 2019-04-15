@@ -1,0 +1,82 @@
+*{
+box-sizing: border-box;
+}
+html,body{
+	padding:0px;
+	margin: 0px;
+}
+#main-header{
+	height:100px;
+	background-color: #ff8000;
+	padding: 20px;
+}
+h1{
+	margin: 0px;
+	font: bold 50px/60px Arial, Helvetica, sans-serif;
+}
+#top-nav{
+	background-color: #c68c53;
+	position: sticky;
+	top:0px;
+}
+
+ul{
+	list-style-type: none;
+	padding-left: 0px;
+	display: flex;
+
+	margin:0;
+
+
+	
+}
+li{
+	text-align: center;
+	width: 20%;
+	min-width: 160px;
+}
+li a{
+	display: block;
+	height: 100%;
+	text-decoration: none;
+	padding:0 10px;
+	border-right: 1px solid white;
+	color:white;
+	font: bold 18px/60px Arial, Helvetica, sans-serif;
+	vertical-align: middle;
+	line-height: 70px;
+
+}
+li a:hover{
+	color: #ff1a75;
+	background-color: #ffcce0;
+}
+#big-div{
+	height: 2000px;
+	background-color: #ffe6cc;
+}
+@media screen and (max-width: 620px){
+
+	h1{
+		display: none;
+	}
+
+
+	ul{
+		display: block;
+		margin:0;
+	}
+	li{
+		width: 100%;
+	}
+	li a {
+		line-height: 30px;
+		font-size: 15px;
+		border-top: 2px solid white;
+	}
+
+	/* bottom border on the a tag inside the last li in the ul*/
+	ul li:last-child{
+		border-bottom: 2px solid white;
+	}
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        div{
+            border: 1px solid white;
+            margin: 25px auto;
+            
+        }
+    </style>
+
+
+   <script> 
+        function toogleDivSize(){
+            //getElementsByTagName returns collection of elements
+             var divs = document.getElementsByTagName("div");
+
+             if (divs[0].style.width=="50%") {
+                 for(var index = 0; index < divs.length; index++) {
+                    divs[index].style.width="100%";
+                  }
+             }
+             else{
+                 for (var  index = 0; index < divs.length; index++) {
+                    divs[index].style.width="50%";
+                  }
+             } 
+/*  for(var index = 0; index < divs.length; index++)  {
+    if (divs[0].style.width=="100%"){
+        divs[index].style.width="50%";
+    }
+    else{
+        divs[index].style.width="100%";
+    }
+    
+*/
+
+         }
+    </script>
+
+  
+
+
+    
+
+</head>
+<body>
+    <div id="outter" style="background-color: blue; height: 200px;">
+        <div id="inner" style="background-color: plum; height: 100px;">
+            <div id="clickme" style="background-color: lightgreen; height: 100px;" onclick="toogleDivSize();">Click me</div>
+        </div>
+    </div>
+</body>
+</html>

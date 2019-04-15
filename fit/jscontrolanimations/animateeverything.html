@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/animate2.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+       
+
+    </div>
+</body>
+
+<script>
+    //get the wrapper element 
+    var wrapper = document.getElementById("wrapper");
+
+    //create a new div element
+    var littlebox = document.createElement("div");
+
+    //on the new set div set a class attribute with a value of box
+    //(box is our css class we defined in our css file)
+    //*****so our first little box would do stuff too****
+    littlebox.setAttribute("class", "box");
+    littlebox.setAttribute("onmouseover", "addOrbit(this);");
+
+    //the addEventListener expects the first parameter to be a string with the name of the event and the second parameter to be a callback (name of a function) to be invoked/called when event is raised
+        //we can also use an annonymus  function as the callback
+        //in the anonymus function we can call other functions such as the removeOrbit
+    littlebox.addEventListener('animationend', function(){removeOrbit(littlebox);});
+
+
+    //put (append) the box in the wrapper as a child element (nested inside the wrapper)
+   
+        wrapper.appendChild(littlebox);
+
+    //now lets create and add 49 new divs (with the box class)
+    for (let index = 0; index < 120; index++) {
+        var div = document.createElement("div");
+        div.setAttribute("class", "box");
+        div.setAttribute("onmouseover", "addOrbit(this);");
+        
+        div.addEventListener('animationend', function(evt){removeOrbit(evt.srcElement);});
+        
+        //on every second box we will make it gray
+        if (index%2 == 0) {
+            div.setAttribute("style", "background-color: lightgray; border-radius: 25px;");
+        }
+        wrapper.appendChild(div);
+        
+    }
+
+    function log(){
+        console.log("animation ended");
+    }
+
+    function addOrbit(element){
+        element.classList.add('orbit');
+    }
+    
+    function removeOrbit(element){
+        element.classList.remove('orbit');
+    }
+
+    //get a collection of all the boxes with the class 'box'
+    //querySelectorAll - uses CSS selector syntax (e.g 'ul li a' ... .classname ...#wrapper)
+    var allTheBoxes = document.querySelectorAll(".box");
+
+    console.log("Number of boxes found: " + allTheBoxes.length);
+   /*
+    for (let index = 0; index < allTheBoxes.length; index++) {
+        allTheBoxes[index].addEventListener('click', addOrbit(allTheBoxes[index]) );
+    }*/
+   
+
+</script>
+</html>

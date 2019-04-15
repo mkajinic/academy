@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        document.title="Javascript Page 1";
+    </script>
+
+<style>
+    #div1 {background-color: coral;
+    width: 100px;
+    height: 100px;
+    transition: all 1s;
+    }
+</style>
+
+</head>
+<body style="background-color:rgb(75, 199, 147);">
+    
+<p id="para1"></p>
+<p id="para2" onclick="window.alert('You click on paragraph 2!');"></p>
+<p id="para3" onmouseover="this.style.color = 'red';" onmouseout="this.style.color='white';"></p>
+
+<div id="div1" onmouseover="this.style.width = '150px'; this.style.height= '150px';" 
+onmouseout="this.style.height='100px'; this.style.width = '100px';"><p> I am div1</p></div>
+
+</body>
+<script>
+         document.getElementById("para1").innerHTML= "Javascript put me here!";
+        document.getElementById("para2").innerHTML="Sausages";
+        document.getElementById("para3").innerHTML="Fiscake";
+        document.getElementById("para3").style.backgroundColor ="blue";
+        document.getElementById("para3").style.color="white";
+
+
+        var myElement = document.getElementById("para2");
+
+        myElement.style.backgroundColor = "pink";
+        myElement.style.color = "black";
+        myElement.style.width = "50%";
+
+
+
+</script>
+</html>

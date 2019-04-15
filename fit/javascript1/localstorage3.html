@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body id="body">
+    <button onclick="localStorage.clear()">Clear Storage</button>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, consectetur eveniet. Voluptatem rerum sit iste, culpa id quia voluptas? Odit amet sequi, officiis inventore voluptatibus blanditiis quisquam porro a error.</p>
+    <p>Neque fugit libero accusantium <span class="italic red"> consectetur voluptatem sunt magni laudantium</span>, omnis nemo sint est. Earum maxime quasi aliquid neque sit officia, dolore distinctio facere praesentium tempora, quis nam porro! Fugiat, aspernatur!</p>
+    <p>Maxime quidem culpa, ipsam expedita mollitia incidunt ad illo voluptatem inventore sed, quod numquam animi enim, ea deserunt esse recusandae laboriosam excepturi. Eius, commodi! Quaerat exercitationem ea officiis a labore!</p>
+    
+    <!--select>option*3-->
+    <select name="" id="color" onchange="setColor()">
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="plum">Purple</option>
+    </select>
+
+    <h3>Background color</h3>
+    <select name="" id="bgcolor" onchange="setColor()">
+            <option value="white">white</option>
+            <option value="black">black</option>
+            <option value="magenta">magenta</option>
+        </select>
+</body>
+
+<script>
+
+    //JS object
+    var preferances = {paraColor:"black", bgColor:"white"};
+
+
+    function setColor(){
+        //change all paragraphs to the selected color and save the color in local storage
+        var paras = document.getElementsByTagName("p");
+
+        var body = document.getElementById("body");
+
+        //set and save the background color to local storage
+        var backgroundColor = document.getElementById("bgcolor").value;
+
+        //save the selected background color from the combo box
+        body.style.backgroundColor = backgroundColor;
+        //save the background color to the preferances object
+        preferances.bgColor = backgroundColor;
+
+
+        //save the selected color in the object
+        preferances.paraColor = document.getElementById("color").value; //.value curently selected option in combo box
+
+        for (let index = 0; index < paras.length; index++) {
+             paras[index].style.color = preferances.paraColor;
+            
+        }
+
+        //Save the JSON encoded string to the object to local storage
+        var JSONString = JSON.stringify(preferances);
+        localStorage.setItem("preferances", JSONString);
+
+        console.log("Paraghraph color saved as: " + localStorage.getItem("preferances"));
+    }
+
+    window.onload = function(e){
+        //check to see if the color is saved alread an page load set the paragraph color
+        //load se the paragraphs colors
+        var paras = document.getElementsByTagName("p");
+
+        // create a new object from the JSON encoded string in local storage(that was saved the key "preferances" if it exists)
+        var savedPreferances = JSON.parse(localStorage.getItem("preferances"));
+
+        //is the savedPreferance object null
+        console.log(savedPreferances);
+
+        //If (savedpreferance) not null then set the color of the paragraphs
+        if (savedPreferances !== null) {
+            for (let index = 0; index < paras.length; index++) {
+               paras[index].style.color = savedPreferances.paraColor;     
+            }
+            //on page load set the body color from the bgColor property
+        document.getElementById("body").style.backgroundColor = savedPreferances.bgColor;
+        }
+        
+    }
+</script>
+</html>

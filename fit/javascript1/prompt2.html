@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prompt</title>
+</head>
+<body>
+    <p id="cakePara"></p>
+
+
+<script>
+    alert("Hello");
+
+     //Confirm return a boolean
+    if (confirm("Do you want to eat cake?")){
+        //true
+        var slices = prompt("How many slices of cake?", "1"); //prompt returns a string
+        message = "ok.Great, Here is " + slices + " slices of cake for you";
+        document.getElementById("cakePara").innerHTML = message;
+    }
+    else{
+        //false
+        alert("Ok, no cake for")
+         var message = "To bad. its great";
+        document.getElementById("cakePara").innerHTML = message;
+    
+    } 
+
+   
+    
+</script>
+
+
+</body>
+</html>

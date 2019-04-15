@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+        <style>
+             ul{
+                width: 500px;
+                margin: 0 auto;
+                padding: 2px;
+                list-style-type: none;
+                }
+            li{
+                width: 50%;
+                background-color: aquamarine;
+                border: 1px solid magenta;
+                margin-top: 2px;
+            }
+            .italic{
+                font-style: italic;
+            }
+            .red{
+                color:red;
+                font-weight: 700;
+            }
+        </style>
+</head>
+<body>
+    <div id="para1"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, accusamus. Aspernatur aliquid possimus blanditiis at, quaerat <span class="italic red"> eaque dignissimos rerum laboriosam tenetur</span> deleniti? Blanditiis tempore perferendis delectus perspiciatis quis vitae culpa!</p>
+    
+
+    <script>
+    
+    //person object
+    var person = {
+        firstname: "Kevin",
+        lastname: "Jones",
+        age: 22,
+        today: new Date(2017,2,17,    12,34,45),
+        //array
+        favfood:["pancakes", "cheese", "hedgehog"],
+
+        //object inside an object
+        pet: {
+            name: "Fido",
+            type: "Pigeon",
+            favfood: "banana"
+        }
+    };
+
+    console.log("today in person is a: " + typeof person.today);
+    console.log("today is: " + person.today);
+
+    // JSON will try and convert a JS object to JSON encoded string
+    var objString = JSON.stringify(person);
+
+    //save the JSON encoded objString to localStorage
+    localStorage.setItem("person", objString);
+
+    console.log("Person is a: " + typeof person);
+    console.log("objString is a: " + typeof objString);
+
+    //JSON.parse will try and convert a JSOn string to an object
+    var myPerson = JSON.parse(objString);
+    console.log("myPerson is a: " + typeof myPerson);
+
+
+   // document.getElementById("para1").innerHTML = myPerson.firstname + " " + myPerson.lastname + " who likes " + myPerson.favfood ;
+
+   document.getElementById("para1").innerHTML = `${myPerson.firstname}  ${myPerson.lastname} is ${myPerson.age} years old` ;
+
+    //Show the persons name and age (from myPerson object)
+    document.getElementById("para1").innerHTML = `${myPerson.firstname}  ${myPerson.lastname} is ${myPerson.age} years old`;
+
+    //Loop trough the fav foods
+var para = document.getElementById("para1");
+
+//string to hold the HTML text for our list
+var list = "<ul>";
+    for (let index = 0; index < myPerson.favfood.length; index++) {
+        //add our li items to the list string
+        list += "<li>" + myPerson.favfood[index] + "</li>";
+        
+    }
+
+    //add the HTML string to the inner.HTML of the paragraph
+    para.innerHTML += list;
+
+    //Show the pet details of the myPerson object
+    document.getElementById("para1").innerHTML +=`${myPerson.firstname}  ${myPerson.lastname} has a  ${myPerson.pet.name} who is a ${myPerson.pet.type} and he loves  ${myPerson.pet.favfood}`;
+    
+    var petInfo = "<h1>" + myPerson.pet.name + "</h1>";
+    petInfo += "<p>Type: " + myPerson.pet.type + "</p>"
+    petInfo += "<p>Fav food: " + myPerson.pet.favfood + "</p>"
+
+    document.getElementById("para1").innerHTML += petInfo;
+
+    console.log(myPerson.pet);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<script>
+
+var x;
+var y = 4;
+var word1;
+var word1 = "fiscake";
+
+var a, b, c;
+
+word1=67;
+
+var z = function(){
+    return "Cheese";
+}
+
+var r = function(x,y){
+    return x/y;
+}
+
+alert(z());
+//r will return Nan - Not a Number
+alert(r(10,"cheese"));
+
+//Divide by 0 result in Infinity
+alert(r(10,0));
+
+//Divide by 0 on negative number result in negative Infinity
+alert(r(-10,0));
+
+
+//Float values
+a = 0.1;
+b = 0.2;
+
+//Add a and b
+c = a + b;
+
+//Floats like doubles are approimate numbers and therefore can produce rounding errors
+alert("The addition of a + b is: " + c);
+
+
+</script>

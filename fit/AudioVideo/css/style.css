@@ -1,0 +1,117 @@
+*{
+	box-sizing: border-box;
+}
+html, body{
+	margin: 0;
+	padding: 0;
+	font-family: Garamond, Georgia, sans-sherif 16px bold;
+}
+#wrapper{
+	width: 80%;
+	height: 100%;
+	margin:50px auto;
+	background-color: pink;
+    padding-top: 1px;
+    padding-bottom:  1px;
+}
+#contact {
+	width: 80%;
+	margin: 20px auto;
+	background-color: lightpink;
+	display: flex;
+}
+#contact-form, #contact-map{
+	
+	width: 50%;
+	border: 1px solid white;
+}
+#contact-map, #contact-form{
+	padding: 6px;
+}
+/* '>' parent -h3 tags direct parent is #contact-map*/
+#contact-map > h3{
+color: #C71585;
+}
+#contact-map{
+	width: 75%
+}
+
+#map iframe {
+	width: 90%;
+	height: 85%;
+	border: 5px solid white;
+}
+#map{
+	
+	margin:auto;
+	width: 90%;
+	height: 85%;
+}
+#contact-form{
+	/*overflow: scroll;*/
+}
+#contact-form > h3{
+color: #C71585;
+}
+#form1 {
+	width: 100%;
+	border:1px solid white;
+	display: flex;
+	padding: 3px;
+	flex-direction: column;
+	align-items: left;
+}
+input[type="submit"] {
+	background-color: #C71585;
+	height: 30px;
+	cursor: pointer;
+}
+
+
+/**********************************************/
+
+#top, #middle, #bottom{
+	border: 1px solid white;
+	height: 500px;
+	margin:30px 0px;
+	background-color: lightgray;
+	padding: 15px;
+	display: flex;
+}
+#video-left, #video-right{
+	width: 50%;
+	height: 100%;
+	padding: 15px;
+	background-color:pink;
+	border: 5px solid white;
+}
+#video-right video{
+	width: 100%;
+	height: 100%;
+}
+#video-left video{
+	width: 100%;
+	height: 100%;
+}
+#audio1{
+	height: 100%;
+	width: 50%;
+	margin: 0 auto;
+	background-image: url(../images/puppy.jpg);
+	background-repeat: no-repeat;
+	background-size: auto;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+#youtube{
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+}
+#youtube iframe{
+	border: 5px solid white;
+	width: 100%;
+	height: 100%;
+}
+

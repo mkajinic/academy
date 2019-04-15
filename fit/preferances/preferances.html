@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script src = "js/js1.js"></script>
+    <title>Preferances</title>
+</head>
+<body>
+    <div id="wrapper">
+
+        <nav id="mainnav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Preferances.html" class="active">Preferances</a></li>
+            </ul>
+        </nav>
+
+        <main id="main">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos tempora animi eius quaerat similique doloremque mollitia, sed id fugit? Voluptatum officiis excepturi illum non sunt quibusdam, saepe quisquam debitis error?</p>
+            <p>Amet corrupti autem doloremque voluptas quas ea, obcaecati quis distinctio. Nulla suscipit officia asperiores provident ea quibusdam perferendis ab ex! Vitae impedit hic distinctio, mollitia fugit nemo dicta ipsa dolorem.</p>
+            <p>Alias, in, sint expedita doloribus excepturi praesentium ex reprehenderit nostrum deleniti libero mollitia animi vero recusandae id? Deleniti quibusdam neque quod dolor, quasi quos, debitis ex praesentium deserunt unde cum.</p>
+
+            <h3>Paragraph Color</h3>
+            <input type="color" id="paracolor" onchange="setParaColor();"> 
+
+            <h3>Background Color</h3>
+            <input type="color" id="bgcolor" onchange="setBgColor();"> 
+
+            <h3>Paragraph Font Size</h3>
+            <select name="" id="parafontsize" onchange="setFontSize();">
+                <option value="16">Small</option>
+                <option value="20">Medium</option>
+                <option value="24">Large</option>
+            </select>
+
+            <br>
+            <br>
+            <button id="save" onclick="savePreferances()">Click to save preferances</button>
+        </main>
+
+    </div>
+</body>
+</html>

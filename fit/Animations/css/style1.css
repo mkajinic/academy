@@ -1,0 +1,171 @@
+* {
+	box-sizing: border-box;
+}
+#wrapper {
+	width: 80%;
+	height: 700px;
+	margin:50px auto;
+	
+}
+#top, #middle, #bottom{
+	height: 200px;
+	margin: 20px;
+	border: 1px solid magenta;
+	background-color: lightblue;
+	display: flex;
+}
+#box1{
+	width: 100px;
+	height: 100px;
+	background-color: orange;
+	margin: 10px;
+	/* Setting the transition for multiple properties */
+	transition: background-color 4s, width 4s, height 2s;
+
+}
+#box1:hover{
+	background-color: green;
+	width: 200px;
+	height: 150px;
+
+}
+#box2{
+	width: 100px;
+	height: 100px;
+	background-color: gray;
+	margin: 10px;
+	transition: all 2s;
+	border: 1px solid magenta;
+}
+#box2:hover{
+	border-radius: 50px;
+	border: 3px solid red;
+
+}
+#box3{
+	width: 100px;
+	height: 100px;
+	background-color: purple;
+	margin: 10px;
+	border : 1px solid black;
+	border-radius: 50%;
+	transition: all 1.5s;
+}
+#box3:hover{
+	border-radius: 0;
+	border: 3px solid black;
+}
+#box4{
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	margin: 50px;
+	transition: all 1s;
+}
+#box4:hover{
+	/*transform: rotate(360deg);*/
+	transform: scale(2) rotate(360deg);
+	background-color: pink;
+	width: 150px;
+	height: 150px;
+	opacity: .5;
+	border-radius: 50%;
+}
+#box5{
+	width: 100px;
+	height: 100px;
+	margin: 60px;
+	border-radius:50px;
+	background-image: url('C:/websites/Animations/bloom.jpg');
+	background-position: center;
+	background-size: 50%;
+	transition: all 3s;
+}
+#box5:hover{
+	background-size: 200%;
+}
+/*******************************************/
+#littlediv1 {
+	width: 50px;
+	height: 50px;
+	position: relative;
+	background-color: magenta;
+	animation: moveleft 2s infinite;
+	-webkit-animation:moveleft 2s infinite ;
+	-moz-animation:moveleft 2s infinite ;
+}
+#littlediv2 {
+	width: 50px;
+	height: 50px;
+	position: relative;
+	background-color: magenta;
+	animation: moveleftandback 2s infinite;
+}
+#littlediv3 {
+	width: 50px;
+	height: 50px;
+	position: relative;
+	background-color: magenta;	
+	animation: path1 ease-in-out 4s 5;
+}
+
+@keyframes path1 {
+	0%{top:0px; left:0px; background-color: magenta; transform: rotate(0deg) scale(1);}
+	25%{top:0px ;left:200px;background-color: tomato;transform: rotate(90deg) scale(5);}
+	50%{top:150px; left:200px;background-color: blue;transform: rotate(180deg) scale(1.75);}
+	75%{top:150px; left:0;background-color: yellow;transform: rotate(270deg) scale(2);}
+	100%{top:0px; left:0px;background-color: green;transform: rotate(0deg) scale(10);}
+}
+@keyframes moveleftandback{
+	0%{left:0px;}
+	50%{left:200px;}
+	100%{left:0px;}
+}
+
+@keyframes moveleft{
+	from{left:0px;}
+	to{left:200px;}
+}
+/*vender prefix*/
+@-webkit-keyframes moveleft{
+	from{left:0px;}
+	to{left:200px;}
+}
+@-moz-keyframes moveleft{
+	from{left:0px;}
+	to{left:200px;}
+}
+/***********big e********************************/
+#wrapper{
+	width:450px;
+	height:550px;
+	box-sizing: border-box;
+	background-color: pink;
+}
+#bige{
+	width: 50px;
+	height: 50px;
+	position: relative;
+	background-color: lightgreen;	
+	animation: pathbige ease-in-out 4s 5;
+}
+@keyframes pathbige{
+	0%{top:0px; left:0px; }
+	15%{top:0px; left:400px;}
+	20%{top:100px; left:200px;}
+	30%{top:100px; left:200px;}
+	35%{top:100px; left:200px;}
+	40%{top:0px; left:0px;}
+	45%{top:0px; left:0px;}
+	50%{top:0px; left:0px;}
+	55%{top:0px; left:0px;}
+	60%{top:0px; left:0px;}
+	60%{top:0px; left:0px;}
+	75%{top:0px; left:0px;}
+	100%{top:0px; left:0px;}
+
+
+	
+	
+}
+	

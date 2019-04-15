@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // make an object for a person with first name joe, last name murphy age 45
+        //and a method in the person to return the persons full name
+
+        var person = {
+            firstName: 'John',
+            lastName: 'Murphy',
+            age: 45,
+            favFood:['mango', 'bannana', 'apple'],
+            fullName: function (){
+            return this.firstName + " " + this.lastName;
+        }
+        }
+    
+    
+        //Loop to write out the persons full name age and favourite foods
+       for (let index = 0; index < person.favFood.length; index++) {
+           console.log(person.fullName() + " age " + person.age + " loves to eat " + person.favFood[index] + ".");
+           
+       }
+
+        </script>
+
+       
+</body>
+</html>

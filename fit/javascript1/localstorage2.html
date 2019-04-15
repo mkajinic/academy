@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, consectetur eveniet. Voluptatem rerum sit iste, culpa id quia voluptas? Odit amet sequi, officiis inventore voluptatibus blanditiis quisquam porro a error.</p>
+    <p>Neque fugit libero accusantium <span class="italic red"> consectetur voluptatem sunt magni laudantium</span>, omnis nemo sint est. Earum maxime quasi aliquid neque sit officia, dolore distinctio facere praesentium tempora, quis nam porro! Fugiat, aspernatur!</p>
+    <p>Maxime quidem culpa, ipsam expedita mollitia incidunt ad illo voluptatem inventore sed, quod numquam animi enim, ea deserunt esse recusandae laboriosam excepturi. Eius, commodi! Quaerat exercitationem ea officiis a labore!</p>
+    
+    <!--select>option*3-->
+    <select name="" id="color" onchange="setColor()">
+        <option value="green">Green</option>
+        <option value="pink">Pink</option>
+        <option value="plum">Purple</option>
+    </select>
+</body>
+
+<script>
+    function setColor(){
+        //change all paragraphs to the selected color and save the color in local storage
+        var paras = document.getElementsByTagName("p");
+
+        var color = document.getElementById("color").value;
+
+        for (let index = 0; index < paras.length; index++) {
+             paras[index].style.color = color;
+            
+        }
+
+        //Save the color to local storage
+        localStorage.setItem("paracolor", color);
+        console.log("Paraghraph color saved as: " + localStorage.getItem("paracolor"));
+    }
+
+    window.onload = function(e){
+        //check to see if the color is saved alread an page load set the paragraph color
+        //load se the paragraphs colors
+        var paras = document.getElementsByTagName("p");
+
+        if (localStorage.paracolor != undefined) {
+            for (let index = 0; index < paras.length; index++) {
+               paras[index].style.color = localStorage.getItem("paracolor");
+                
+            }
+        }
+    }
+</script>
+</html>

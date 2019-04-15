@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#message{
+    color: red;
+}
+#wrapper{
+    background-color:rgb(228, 152, 205);
+    width: 80%;
+    margin: 0 auto;
+}
+
+#mainnav{
+    background-color: rgb(236, 204, 232);
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+li{
+    width: 20%;
+    min-width: 120px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li a{
+    display: block;
+    line-height: 3em;
+    font-size: 1.3em;
+    border-right:1px solid white;
+    text-decoration: none;
+    color: darkblue;    
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 10px;
+}
+
+a:hover{
+    background-color:aquamarine; 
+    color: grey;    
+}
+
+.active{
+    background-color:aquamarine;
+}
+
+#main{
+    padding: 20px;   
+}

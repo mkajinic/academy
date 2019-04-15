@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+ 
+<script>
+    
+    //Check to see if local storage is available
+
+    if (typeof(storage) != "undefined") {
+        //We have local storage in browser
+        console.log("local storage is available");
+    }
+    else{
+        console.log("No Local storage available");
+    }
+    </script>
+
+
+<body>
+        <p id="welcome"></p>
+        
+<script>
+    if (localStorage.username == undefined) {
+        //get the users name
+    var username = prompt("please enter your name");
+
+
+    //save the username to local storage
+     //Data is saved as key value pair <"key", "value">
+     localStorage.setItem("username",username);
+    }
+
+    document.getElementById("welcome").innerText = "Welcome " + localStorage.getItem("username");
+
+     //Show the username from local storage in the console using the key name to retreive the value
+     console.log("Username in storage is " + localStorage.getItem("username"));
+    </script>
+
+    <button onclick="localStorage.clear();">Clear local storage</button>
+</body>
+
+
+
+</html>

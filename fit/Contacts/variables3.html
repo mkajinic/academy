@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // make an object for a person with first name joe, last name murphy age 45
+        //and a method in the person to return the persons full name
+
+        const person = {
+            firstName: 'John',
+            lastName: 'Murphy',
+            age: 45,
+            favFood:['mango', 'bannana', 'apple'],
+            fullName:function (){
+            return this.firstName + " " + this.lastname
+        }
+        }
+        // const {firstName, lastName} = person;
+        // console.log(firstName,lastName);
+
+      
+       
+
+    
+        console.log(person.fullName());
+        //Loop to write out the persons full name age and favourite foods
+       for (let index = 0; index < person.favFood.length; index++) {
+           console.log(person.favFood[index]);
+           
+       }
+
+
+       //Create a JS Car protytpe/constructor to make a car object
+
+       function Car (make, model, mileage, color){
+           this.make = make;
+           this.model = model;
+           this.mileage = mileage;
+           this.color = color;
+           this.drive = function(distance){
+               console.log("The " + this.make + " " + this.model + " has driven " + distance + " kms.")
+               //add the driven distance to the cars mileage
+
+           }
+           //create a method to show mileage in the console
+
+           
+       }
+
+       var car1 =new Car("Mazda", "6", 27400, "black");
+       var car2 = new Car("Toyota", "Celica", 21000, "red");
+
+       car1.drive(7854); 
+       
+       car2.drive(2223);
+
+
+        </script>
+
+       
+</body>
+</html>

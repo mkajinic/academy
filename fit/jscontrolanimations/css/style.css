@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+
+#wrapper{
+    width: 550px;
+    height: 600px;
+    background-color: lightgray;
+    margin: 0 auto;
+}
+
+#movearea{
+    margin-top: 30px;
+    height: 550px;
+    background-color: pink;
+}
+#box{
+    width: 50px;
+    height: 50px;
+    background-color: salmon;
+    position: relative;
+    transition: all 1s;
+
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    
+}
+
+.animateBox{
+    -webkit-animation: moveBox 5s 1;
+    animation: moveBox 5s 1;
+}
+
+
+#box:hover{
+    transform: scale(1.5);
+}
+
+@-webkit-keyframes moveBox {
+    0% { top: 0px; left:0px;}
+    25% {top: 0px; left:500px;}
+    50% {top: 500px; left:500px;}
+    75% {top: 500px; left:0px;}
+    100% {top: 0px; left:0px;}
+    
+}
+@keyframes moveBox {
+    0% { top: 0px; left:0px;}
+    25% {top: 0px; left:500px;}
+    50% {top: 500px; left:500px;}
+    75% {top: 500px; left:0px;}
+    100% {top: 0px; left:0px;}
+    
+}

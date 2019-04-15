@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .little-div{
+            width: 80px;
+            height: 80px;
+            margin:20px;
+            background-color: aquamarine;
+            transition: all 1s;
+            border: solid pink;
+            
+        }
+        div#wrapper{
+            width: 80%;
+            display:flex;
+            background-color: blueviolet;
+            margin:0 auto;
+            flex-wrap:wrap;
+        }
+    </style>
+
+    <script>
+        function scale2Rotate45(e){
+            e.style.transform = "scale(2) rotate(350deg)";
+        }
+
+        function scale2Rotate0(e){
+            e.style.transform = "scale(1) rotate(0deg)";
+            e.style.backgroundColor="plum";
+        }
+        function hideThis(e){
+            e.style.visibility = "hidden";
+        }
+
+        function littleDivs(){
+            for (let index = 0; index < 100; index++) {
+                document.write("<div class=\"little-div\" onmouseover=\"scale2Rotate45(this);\" onmouseout=\"scale2Rotate0(this);\"></div>")
+                
+            }
+        }
+
+    
+
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+
+        <button type="button" onclick="document.write(5+6)">Don't click me</button>
+
+
+        <script>
+        littleDivs();
+        </script>
+
+     
+    </div>
+
+
+</body>
+</html>

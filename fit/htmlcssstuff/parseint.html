@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        function tryParseInput(){
+            var input = document.getElementById("input1").value;
+
+            //Try and parse the string to a decimal (base 10) number
+            var number = parseInt(input,10)
+
+            //if our 'number' is not a number 
+            if(Number.isNaN(number)){
+                //\n is a linebreak
+                alert("Please check your input!\n\nThat was not a number");
+            }
+            else{
+                alert("The value entered was: " + number);
+            }
+            
+
+        }
+    
+    </script>
+</head>
+<body>
+    <input type="text" id="input1"><button onclick="tryParseInput()">Click me</button>
+
+</body>
+</html>

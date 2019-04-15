@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #form1{
+        width: 300px;
+        border: 1px solid mediumseagreen;
+        color: rgb(163, 95, 163);
+        margin: 50px auto;
+    }
+    input[type ="text"],input[type="password"], label{
+        width: 90%;
+        margin: 5px 5%;
+    }
+    input[type="submit"]{
+        margin: 5px 5%;
+    }
+    input:invalid{
+        border:1px dashed rgb(168, 72, 72);
+    }
+    input:valid{
+        background-color:rgb(182, 182, 182);
+    }
+    </style>
+</head>
+<body>
+    
+    <form action="idontexist.php" id="form1" method="post">
+        <label for="firstname">First Name:</label>
+        <input type="text" name="firstname" required placeholder="Enter your first name">
+
+        <label for="lastname">Last Name:</label>
+        <input type="text" name="lastname" value="" required placeholder="Enter your last name">
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required placeholder="email@email.com">
+
+        <label for=""> Like cheese?</label>    
+            Yes<input type="radio" name="likecheese" value="Yes">
+            No<input type="radio" name="likecheese" value="No">
+            Meh<input type="radio" name="likecheese" value="Meh">
+
+
+        <div style="width:90%; margin: 5px 5%; border: 1px solid plum;">
+            <label for="">Foods you like:</label><br> 
+            <input type="checkbox" name="food1" value="apples">Apples
+            <input type="checkbox" name="food2" value="apples">Oranges
+            <input type="checkbox" name="food3" value="apples">Strawberries
+        </div>
+        
+        <br>
+
+        <label for="color">Pick a fav color:</label><br>
+        <input type="color" name="favcolor" style="margin:5px 5%;" required><br>
+
+        <label for="dob">Choose your date of birth:</label><br>
+        <input type="date" name="dob" style="margin:5px 5%;" required><br>
+
+        <label for="badthings">How many bad things have you done?</label><br>
+        <input type="number" name="badthings" style="margin:5px 5%;" min="1" max="999" required><br>
+
+        <label for="">How much you like html forms?</label><br>
+            <input id="slider" type="range" name="likeforms" style="margin:5px 5%;" min="0" max="10" value="0" onchange="showRange()" required>
+            <input id="rangeValue" type="text"  style="width: 10%" required>
+
+        <input type="submit" name="submit" value="Submit">
+        <input type="reset" value="Cancel">
+
+    </form>
+</body>
+
+<script>
+    //Runt he showRange() method as soon as the script is interpreted
+    showRange();
+
+    function showRange(){
+        //grab the slider value
+        var sliderValue = document.getElementById("slider").value;
+        //set the rangeValue textbox to the same value
+        document.getElementById("rangeValue").value = sliderValue;
+    }
+</script>
+</html>

@@ -1,0 +1,91 @@
+<script>
+
+// Number
+// String
+// Boolean
+// Function
+// Object
+// Objects - Function, Array, Date
+
+//We also have null and undefined types
+
+//Type of is an operator that shows the type of a variable
+var x = 56;
+// alert(typeof(x));
+
+x = 34.54;
+// alert(typeof(x));
+
+x="fishcake";
+//alert(typeof x );
+
+x= true;
+//alert(typeof(x));
+
+
+//we can use exponent notation for numbers
+x = 3e10;
+//alert(x);
+
+x = 3e-5;
+//alert(x);
+
+
+// Arrays ***********************************************************
+
+//array of strings
+var mystuff =["Strawbery", "Bannana", "Lino Lada"];
+
+//array of strings
+var nums = [1, 5, 45, 1.5, 55.77];
+
+
+for (let index = 0; index < mystuff.length; index++) {
+   document.write(mystuff[index] + ", ");
+    
+}
+
+
+//Concatenating strings and numbers
+//Expressions are evaluated from left to right
+//  alert("Bannana" + (75 +75));
+
+//output 150Fishcake7575
+// alert(75 + 75 + "fiscake" + (75 + "75"));
+
+
+//Objects
+var person = {firstname:"Simon", lastname:"Smith", age:45};
+
+//alert (person.firstname + " " + person.lastname + ", " + "Age: " + person.age);
+//person is a type of object
+//alert(typeof person);
+
+
+//Make a car object
+var car1 = {
+    make:"Merc",
+    year: 2017,
+    color:"black",
+    mileage: 457521,
+    drive: function(distance){
+        console.log("Vroom vroom the " + this.color + " " + this.make + " is driving.");
+        this.mileage += distance;
+    },
+
+    //Function to write the mileage in Km to the console
+    showMileage: function(){
+    alert("The mileage of the " + this.make + " is: " + this.mileage + "Km");
+    }
+}
+
+
+
+//Call the drive function
+car1.drive(10);
+car1.showMileage();
+
+
+
+
+</script>

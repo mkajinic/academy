@@ -1,0 +1,98 @@
+*{
+	box-sizing: border-box;
+}
+#wrapper{
+	width: 80%;
+	height: 500px;
+	background-color: lightblue;
+	margin:50px auto; 
+	padding: 1px;
+}
+.small-div{
+	width: 200px;
+	min-height: 200px;
+	margin:20px auto ;
+	background-color: magenta;
+	position: relative;
+}
+/* when I hover on small-div' class  element change the display of 
+the decendant element with id 'tada; to display:block*/
+.small-div:hover #tada{
+	display: block;
+	left:150px;
+	top: 220px;
+}
+#tada{
+	display: none;
+	width: 400px;
+	height: 400px;
+	background-color: lightgreen;
+	position: absolute;
+	top: 210px;
+	line-height: 400px;
+	left:-100px;
+	z-index: 20;
+}
+
+/* Steps to center text verticaly and horizontaly in a div */
+h1{
+	font-family: Helvetica, Calibri, sans-serif;
+	margin:0;
+	padding: 0;
+	line-height: inherit;/* make it the same as container */
+	vertical-align: middle;
+	text-align: center;
+	font-size: 75px;
+}
+
+
+/* ******************************* */
+
+#top{
+	width: 620px;
+	height: 100px;
+	margin: 0 auto;
+	background-color: gray;
+	display:flex;
+}
+
+.picture-box{
+	box-sizing: border-box;
+	border: 1px solid magenta;
+	width: 33.33%;
+	height: 100%;
+	text-align: center;
+	position: relative;
+}
+
+img{
+	height: 100%;
+	width: 100%;
+}
+.big-image{
+	display: none;
+	position: absolute;
+	top: 100px;
+	left: -50%;
+	box-sizing: border-box;
+	width: 400px;
+	height: 300px;
+	border: 20px solid white;
+	transition: all 2s;
+	opacity: 0;
+}
+
+.picture-box:hover .big-image{
+	display: block;
+}
+.fade-in{
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1.5s;
+}
+@keyframes fadeInOpacity {
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
