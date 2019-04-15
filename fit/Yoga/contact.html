@@ -25,32 +25,33 @@
                                 <li><a href="courses.html">Courses</a></li>
                                 <li><a href="price.html">Prices</a></li>
                                 <li class="current"><a href="contact.html">Contact</a></li>
-                                <i class="fas fa-angle-right" onclick="history.back()"></i>
-                                <i class="fas fa-angle-left" onclick="history.forward()"></i>
+                                <i class="fas fa-angle-left" onclick="history.back()"></i>
+                                <i class="fas fa-angle-right" onclick="history.forward()"></i>
                             </ul> 
                  </nav>
 
 
-
+                 <form action="process.php" id="form2" method="POST">
          <div class="wrapper">
              <div class="contact-form">
                  <div class="input-fields">
-                     <input type="text" class="input" placeholder="First Name">
-                     <input type="text" class="input" placeholder="Last Name">
-                     <input type="date" class="input" placeholder="Date of birth">
-                     <br>
+                     <input type="text" class="input" placeholder="First Name" required>
+                     
+                     <input type="text" class="input" placeholder="Last Name" required>
+                     <input type="date" class="input"  data-toggle="tooltip" data-placement="top" title="Date of birth">
                      <div>
                      <label for="">Gender:</label>   
                      <br> 
-                     Female<input type="radio"  name="gender" value="Female">
-                     Male<input type="radio"  name="gender" value="Female">
+                     Female<input type="radio"  name="gender" value="Female" required>
+                     Male<input type="radio"  name="gender" value="Female" >
                     </div>
                     <br>
                      <label for="">What kind of information you need</label>
-                     <div >
-                            <input type="checkbox" name="info1" value="Price">Prices
-                            <input type ="checkbox" name="info2" value="Course">Course Types
-                            <input type ="checkbox" name="info3" value="Other">Other
+                     <br>
+                     <div>
+                            <input type="checkbox" name="info" value="Price" required>Prices
+                            <input type ="checkbox" name="info" value="Course">Course Types
+                            <input type ="checkbox" name="info" value="Other">Other
                         </div>
 
                      
@@ -59,7 +60,7 @@
                  </div>
                  
                  <div class="msg">
-                        <textarea placeholder="Message"></textarea>
+                        <textarea placeholder="Message" required></textarea>
                         <br>
                         <br>
                     <input type="submit" name="submit">
@@ -71,7 +72,7 @@
 
              
          </div>                   
-                       
+        </form>         
         <style>
          @media screen and (max-width:768px){
    
@@ -84,6 +85,8 @@
         }
         </style> 
                 
-        
+                <footer>
+                        <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script>, Yoga</p>
+                    </footer>
 </body>
 </html>

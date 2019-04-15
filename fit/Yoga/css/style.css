@@ -10,7 +10,9 @@ nav{
     display:flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
+    padding-top: 30px;
+	min-height: 70px;
+    margin-bottom: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 nav a:hover{
@@ -41,6 +43,13 @@ nav a:hover{
     letter-spacing: 3px;
     font-size: 18px;;
 }
+a:visited {
+    color: pink;
+  }
+nav li a:active {
+    background: #333;
+    color: white;
+}
 
 @media screen and (max-width:768px){
           
@@ -54,6 +63,8 @@ nav a:hover{
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: gray;
+    position: relative;
+    min-height: 100vh;
     
 }
 
@@ -75,13 +86,31 @@ body {
 .home{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	float: left;
-    width: 65%;
+    width: 55%;
     text-align: center;
     padding: 20px;
     position: fixed;
     top: 50%;
     left: 0%;
     color: black;
+}
+/* aside bar */
+aside#sidebar{
+	float: right;
+	width: 30%;
+    margin-right: 20px;
+}
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+	width: 90%;
+	padding: 5px;
+}
+.dark{
+	padding: 15px;
+    background: rgb(228, 155, 155);
+    border: 1px solid black;
+	color: #ffffff;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 /* Price table */
@@ -108,6 +137,8 @@ color: coral;
 display: table;
 padding: 0 0 8em 0;
 color:white;
+min-height:100%;
+   position:relative;
 }
 
 .container td, .container th {
@@ -136,14 +167,14 @@ padding-left:2%;
     color: white; }
 
 .container tr:hover {
- background-color: coral;
+ background-color: rgb(228, 155, 155);
 -webkit-box-shadow: 0 6px 6px -6px rgb(238, 160, 96);
      -moz-box-shadow: 0 6px 6px -6px rgb(238, 160, 96);
           box-shadow: 0 6px 6px -6px rgb(238, 160, 96);
 }
 
 .container td:hover {
-background-color: rgb(238, 160, 96);
+background-color:pink;
 color: black;
 font-weight: bold;
 
@@ -208,7 +239,7 @@ ul#services li{
 	border: #cccccc solid, 1px;
    
     margin-top: 40px;
-    background: rgb(166, 159, 184);
+    background:rgb(228, 155, 155);
     
 }
 
@@ -303,9 +334,9 @@ input[type=reset] {
  /* Coin */
 
 #coin{
-    background-image:url('../images/coinAnimation.jpg');
-    width: 115px;
-    height: 152px;
+    background-image:url('../images/coinTran.png');
+    width: 90px;
+    height: 100px;
     
     -webkit-animation-play-state: paused;
             animation-play-state: paused;
@@ -313,7 +344,7 @@ input[type=reset] {
 }
 .coinAnimation{
    
-    animation: walk 1s steps(9) infinite,
+    animation: walk 1s steps(10) infinite,
                 forward 5s linear infinite;
                 -webkit-animation-play-state: paused;
                 animation-play-state: paused;
@@ -331,7 +362,19 @@ input[type=reset] {
         transform: translateX(-100);
     }
     100% {
-      transform: translateX(1200px);
+      transform: translateX(1100px);
     }
 }
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    /* position: fixed;
+    z-index: 1; */
+  }
  

@@ -26,23 +26,23 @@
                                 <li class="current"></li><a href="price.html">Prices</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                                 
-                                <i class="fas fa-angle-right" onclick="history.back()"></i>
-                                <i class="fas fa-angle-left" onclick="history.forward()"></i>
+                                <i class="fas fa-angle-left" onclick="history.back()"></i>
+                                <i class="fas fa-angle-right" onclick="history.forward()"></i>
                             </ul>
     
                  </nav>
 
                 
-                 <div id="coin" style="margin:20px;"></div>
+                 <div id="coin" style="margin:40px;"></div>
 
-                 <div id="wrapper" style="margin:20px;">
+                 <div id="wrapper" style="margin:40px;">
                      <button onclick="start()">Start</button> 
                      <button onclick="pause()">Pause</button>
                      <input id="speed" type="range" min="1.2" max="15" onchange="changeAnimationSpeed()"></input>
                      </div>
                      <br>
 
-                     <div style="display:block; margin: 10px; text-align:center;">
+                     <div style="display:block; margin: 20px; text-align:center;">
                      <svg height="80" width="200">
                             <g fill="none">
                               <path stroke="pink" d="M5 20 l215 0" />
@@ -164,6 +164,8 @@ document.getElementById("speed").blur();
 }            
 
                     </script>
-
+<footer>
+        <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script>, Yoga</p>
+    </footer>
 </body>
 </html>
