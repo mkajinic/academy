@@ -177,6 +177,13 @@ window.onload = function(){
         }
     }
 }
+function mouseOver() {
+    document.getElementById("demo").style.fontSize = "400%";
+  }
+
+  function mouseOut() {
+    document.getElementById("demo").style.fontSize = "130%";
+  }
 
 
 
