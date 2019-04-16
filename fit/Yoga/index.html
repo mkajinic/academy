@@ -26,9 +26,10 @@
                         <li><a href="courses.html">Courses</a></li>
                         <li><a href="price.html">Prices</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <i class="fas fa-angle-left" onclick="history.back()"></i>
-                                <i class="fas fa-angle-right" onclick="history.forward()"></i>
                     </ul>
+                        <i class="fas fa-angle-left" onclick="history.back()"></i>
+                        <i class="fas fa-angle-right" onclick="history.forward()"></i>
+                    
 
          </nav>
          <section id="main" style="margin:20px;">
@@ -45,7 +46,7 @@
                             <input type="color" id="bgcolor" onchange="setBgColor();">
                 
                             <h3>Paragraph Font Size</h3>
-                            <select name="" id="parafontsize" onchange="setFontSize();">
+                            <select id="parafontsize" onchange="setFontSize();">
                                 <option value="16">Small</option>
                                 <option value="20">Medium</option>
                                 <option value="24">Large</option>
@@ -89,7 +90,7 @@
        
     
         <script>
-            
+             
 
                 //code to prompt user to save unsaved change before leaving the page
             
@@ -111,10 +112,12 @@
                 return true;
                          }
                         }
-            
+                        
+              
+                        var name = window.prompt("Please enter your name:")
+                        window.alert("Hello " + name);
             </script>   
     
                 
-
 
 </html>
