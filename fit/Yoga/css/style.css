@@ -165,17 +165,17 @@ padding-left:2%;
 
 /* Background-color of the odd rows */
 .container tr:nth-child(odd) {
-    background-color: rgba (0, 0, 0, 0.5);
+    background-color: #ffffff00;
 }
 
 /* Background-color of the even rows */
 .container tr:nth-child(even) {
-    background-color: rgba (0, 0, 0, 0.5);;
+    background-color: #ffffff00;
     
 }
 
 .container th {
-    background-color: rgba (0, 0, 0, 0.5);
+    background-color:#ffffff00;
 }
 
 .container td:first-child { 
@@ -199,7 +199,7 @@ transform: translate3d(6px, -6px, 0);
 transition-delay: 0s;
     transition-duration: 0.4s;
     transition-property: all;
-transition-timing-function: line;
+transition-timing-function: linear;
 }
 
 /* Courses */
@@ -241,8 +241,8 @@ transition-timing-function: line;
 
 }
 .container-g .box .details .content h2{
-	margin: 5;
-	padding: 5;
+	margin: 5px;
+	padding: 5px;
 	font-size: 20px;
 	color: black;
 }
@@ -251,8 +251,7 @@ transition-timing-function: line;
 ul#services li{
 	list-style: none;
 	padding: 15px;
-	border: #cccccc solid, 1px;
-   
+	border: #cccccc solid 1px;
     margin-top: 40px;
     background:rgb(228, 155, 155);
     
@@ -374,7 +373,7 @@ input[type=reset] {
 }
 @keyframes forward{
     0% {
-        transform: translateX(-100);
+        transform: translateX(-100px);
     }
     100% {
       transform: translateX(1100px);

@@ -17,7 +17,7 @@
         <nav>
 
                 <div class ="logo">
-                    <h4>Yoga</h4>
+                    <h4 id="demo" onmouseover="mouseOver()" onmouseout="mouseOut()">Yoga</h4>
                 </div>
                         <ul class="nav-links">
                                 <li class="index.html"><a href="index.html">Home</a></li>
@@ -32,14 +32,15 @@
                  </nav>
 
 
-                 <form action="process.php" id="form2" method="POST">
+                 <form action="http://www.codeschool.ie/php/sendEmail.php" id="form2" method="post">
          <div class="wrapper">
              <div class="contact-form">
                  <div class="input-fields">
-                     <input type="text" class="input" placeholder="First Name" required>
+                     <input type="text" name="firstname" class="input" placeholder="First Name" required>
                      
-                     <input type="text" class="input" placeholder="Last Name" required>
-                     <input type="date" class="input"  data-toggle="tooltip" data-placement="top" title="Date of birth">
+                     <input type="text" name="lastname" class="input" placeholder="Last Name" required>
+                     <input type="email" name="email" class="input" placeholder="Enter your email" required>
+                     <input type="date" name="dob" class="input"  data-toggle="tooltip" data-placement="top" title="Date of birth">
                      <div>
                      <label >Gender:</label>   
                      <br> 
@@ -48,7 +49,7 @@
                     </div>
                     <br>
                      <label>What kind of information you need</label>
-                     <br>
+                    
                      <div>
                             <input type="checkbox" name="info" value="Price" required>Prices
                             <input type ="checkbox" name="info" value="Course">Course Types
