@@ -185,7 +185,28 @@ function mouseOver() {
     document.getElementById("demo").style.fontSize = "130%";
   }
 
- 
+  function getPosition(){
+    var lat = document.getElementById("lat");
+    var long = document.getElementById("long");
+
+    //navigation is the browser
+    //Check to see if geolocation is supported/available
+    if (navigator.geolocation) {
+        console.log("Geolocation is supported");
+
+        navigator.geolocation.getCurrentPosition(setPosition);
+    }
+    else{
+        lat.innerHTML += "Your browser does not support geolocation"
+        long.innerHTML += "Your browser does not support geolocation"
+    }
+}
+
+//function to show/set the lattitude and longitude 
+function setPosition(position){
+    lat.innerHTML += position.coords.latitude;
+    long.innerHTML += position.coords.longitude;
+}
 
                     
 
