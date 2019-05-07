@@ -1,0 +1,7 @@
+C:\Users\Student\source\repos\2dArrayExample1\2dArrayExample1\bin\Debug\2dArrayExample1.exe.config
+C:\Users\Student\source\repos\2dArrayExample1\2dArrayExample1\bin\Debug\2dArrayExample1.exe
+C:\Users\Student\source\repos\2dArrayExample1\2dArrayExample1\bin\Debug\2dArrayExample1.pdb
+C:\Users\Student\source\repos\2dArrayExample1\2dArrayExample1\obj\Debug\2dArrayExample1.csprojAssemblyReference.cache
+C:\Users\Student\source\repos\2dArrayExample1\2dArrayExample1\obj\Debug\2dArrayExample1.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\2dArrayExample1\2dArrayExample1\obj\Debug\2dArrayExample1.exe
+C:\Users\Student\source\repos\2dArrayExample1\2dArrayExample1\obj\Debug\2dArrayExample1.pdb
